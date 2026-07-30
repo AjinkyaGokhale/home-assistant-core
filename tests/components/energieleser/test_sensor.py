@@ -2,12 +2,6 @@
 
 from unittest.mock import AsyncMock
 
-from energieleser import (
-    GasleserDevice,
-    GasleserPulseDevice,
-    WaermeleserDevice,
-    WasserleserDevice,
-)
 import pytest
 from syrupy.assertion import SnapshotAssertion
 
@@ -27,85 +21,41 @@ async def _setup_integration(
     await hass.async_block_till_done()
 
 
-@pytest.mark.usefixtures(
-    "entity_registry_enabled_by_default", "mock_energieleser_client"
+@pytest.mark.usefixtures("entity_registry_enabled_by_default")
+@pytest.mark.parametrize(
+    ("device_fixture", "config_entry_fixture"),
+    [
+        pytest.param(
+            "mock_stromleser_device", "mock_stromleser_config_entry", id="stromleser"
+        ),
+        pytest.param(
+            "mock_gasleser_device", "mock_gasleser_config_entry", id="gasleser"
+        ),
+        pytest.param(
+            "mock_gasleser_pulse_device",
+            "mock_gasleser_pulse_config_entry",
+            id="gasleser_pulse",
+        ),
+        pytest.param(
+            "mock_waermeleser_device", "mock_waermeleser_config_entry", id="waermeleser"
+        ),
+        pytest.param(
+            "mock_wasserleser_device", "mock_wasserleser_config_entry", id="wasserleser"
+        ),
+    ],
 )
-async def test_stromleser_sensors(
-    hass: HomeAssistant,
-    entity_registry: er.EntityRegistry,
-    snapshot: SnapshotAssertion,
-    mock_stromleser_config_entry: MockConfigEntry,
-) -> None:
-    """Test all stromleser sensors against a snapshot."""
-    await _setup_integration(hass, mock_stromleser_config_entry)
-    await snapshot_platform(
-        hass, entity_registry, snapshot, mock_stromleser_config_entry.entry_id
-    )
-
-
-@pytest.mark.usefixtures("entity_registry_enabled_by_default")
-async def test_gasleser_sensors(
+async def test_device_sensors(
     hass: HomeAssistant,
     entity_registry: er.EntityRegistry,
     snapshot: SnapshotAssertion,
     mock_energieleser_client: AsyncMock,
-    mock_gasleser_device: GasleserDevice,
-    mock_gasleser_config_entry: MockConfigEntry,
+    request: pytest.FixtureRequest,
+    device_fixture: str,
+    config_entry_fixture: str,
 ) -> None:
-    """Test all gasleser sensors against a snapshot."""
-    mock_energieleser_client.get_device.return_value = mock_gasleser_device
-    await _setup_integration(hass, mock_gasleser_config_entry)
-    await snapshot_platform(
-        hass, entity_registry, snapshot, mock_gasleser_config_entry.entry_id
-    )
-
-
-@pytest.mark.usefixtures("entity_registry_enabled_by_default")
-async def test_gasleser_pulse_sensors(
-    hass: HomeAssistant,
-    entity_registry: er.EntityRegistry,
-    snapshot: SnapshotAssertion,
-    mock_energieleser_client: AsyncMock,
-    mock_gasleser_pulse_device: GasleserPulseDevice,
-    mock_gasleser_pulse_config_entry: MockConfigEntry,
-) -> None:
-    """Test all gasleser.pulse sensors against a snapshot."""
-    mock_energieleser_client.get_device.return_value = mock_gasleser_pulse_device
-    await _setup_integration(hass, mock_gasleser_pulse_config_entry)
-    await snapshot_platform(
-        hass, entity_registry, snapshot, mock_gasleser_pulse_config_entry.entry_id
-    )
-
-
-@pytest.mark.usefixtures("entity_registry_enabled_by_default")
-async def test_waermeleser_sensors(
-    hass: HomeAssistant,
-    entity_registry: er.EntityRegistry,
-    snapshot: SnapshotAssertion,
-    mock_energieleser_client: AsyncMock,
-    mock_waermeleser_device: WaermeleserDevice,
-    mock_waermeleser_config_entry: MockConfigEntry,
-) -> None:
-    """Test all wärmeleser sensors against a snapshot."""
-    mock_energieleser_client.get_device.return_value = mock_waermeleser_device
-    await _setup_integration(hass, mock_waermeleser_config_entry)
-    await snapshot_platform(
-        hass, entity_registry, snapshot, mock_waermeleser_config_entry.entry_id
-    )
-
-
-@pytest.mark.usefixtures("entity_registry_enabled_by_default")
-async def test_wasserleser_sensors(
-    hass: HomeAssistant,
-    entity_registry: er.EntityRegistry,
-    snapshot: SnapshotAssertion,
-    mock_energieleser_client: AsyncMock,
-    mock_wasserleser_device: WasserleserDevice,
-    mock_wasserleser_config_entry: MockConfigEntry,
-) -> None:
-    """Test all wasserleser sensors against a snapshot."""
-    mock_energieleser_client.get_device.return_value = mock_wasserleser_device
-    await _setup_integration(hass, mock_wasserleser_config_entry)
-    await snapshot_platform(
-        hass, entity_registry, snapshot, mock_wasserleser_config_entry.entry_id
-    )
+    """Test all device family sensors against snapshots."""
+    device = request.getfixturevalue(device_fixture)
+    config_entry: MockConfigEntry = request.getfixturevalue(config_entry_fixture)
+    mock_energieleser_client.get_device.return_value = device
+    await _setup_integration(hass, config_entry)
+    await snapshot_platform(hass, entity_registry, snapshot, config_entry.entry_id)

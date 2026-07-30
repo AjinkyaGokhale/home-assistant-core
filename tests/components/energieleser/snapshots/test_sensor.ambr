@@ -1,229 +1,5 @@
 # serializer version: 1
-# name: test_gasleser_pulse_sensors[sensor.gas_pulse_8530321018_gas_flow_rate-entry]
-  EntityRegistryEntrySnapshot({
-    'aliases': list([
-      None,
-    ]),
-    'area_id': None,
-    'capabilities': dict({
-      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
-    }),
-    'config_entry_id': <ANY>,
-    'config_subentry_id': <ANY>,
-    'device_class': None,
-    'device_id': <ANY>,
-    'disabled_by': None,
-    'domain': 'sensor',
-    'entity_category': None,
-    'entity_id': 'sensor.gas_pulse_8530321018_gas_flow_rate',
-    'has_entity_name': True,
-    'hidden_by': None,
-    'icon': None,
-    'id': <ANY>,
-    'labels': set({
-    }),
-    'name': None,
-    'object_id_base': 'Gas flow rate',
-    'options': dict({
-      'sensor': dict({
-        'suggested_display_precision': 0,
-      }),
-    }),
-    'original_device_class': <SensorDeviceClass.VOLUME_FLOW_RATE: 'volume_flow_rate'>,
-    'original_icon': None,
-    'original_name': 'Gas flow rate',
-    'platform': 'energieleser',
-    'previous_unique_id': None,
-    'suggested_object_id': None,
-    'supported_features': 0,
-    'translation_key': 'flow_rate',
-    'unique_id': 'GAS_PULSE_8530321018_current_flow_rate',
-    'unit_of_measurement': <UnitOfVolumeFlowRate.CUBIC_METERS_PER_HOUR: 'm³/h'>,
-  })
-# ---
-# name: test_gasleser_pulse_sensors[sensor.gas_pulse_8530321018_gas_flow_rate-state]
-  StateSnapshot({
-    'attributes': ReadOnlyDict({
-      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'volume_flow_rate',
-      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'GAS_PULSE_8530321018 Gas flow rate',
-      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
-      <EntityStateAttribute.UNIT_OF_MEASUREMENT: 'unit_of_measurement'>: <UnitOfVolumeFlowRate.CUBIC_METERS_PER_HOUR: 'm³/h'>,
-    }),
-    'context': <ANY>,
-    'entity_id': 'sensor.gas_pulse_8530321018_gas_flow_rate',
-    'last_changed': <ANY>,
-    'last_reported': <ANY>,
-    'last_updated': <ANY>,
-    'state': '0.01',
-  })
-# ---
-# name: test_gasleser_pulse_sensors[sensor.gas_pulse_8530321018_pulse_count-entry]
-  EntityRegistryEntrySnapshot({
-    'aliases': list([
-      None,
-    ]),
-    'area_id': None,
-    'capabilities': dict({
-      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
-    }),
-    'config_entry_id': <ANY>,
-    'config_subentry_id': <ANY>,
-    'device_class': None,
-    'device_id': <ANY>,
-    'disabled_by': None,
-    'domain': 'sensor',
-    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
-    'entity_id': 'sensor.gas_pulse_8530321018_pulse_count',
-    'has_entity_name': True,
-    'hidden_by': None,
-    'icon': None,
-    'id': <ANY>,
-    'labels': set({
-    }),
-    'name': None,
-    'object_id_base': 'Pulse count',
-    'options': dict({
-    }),
-    'original_device_class': None,
-    'original_icon': None,
-    'original_name': 'Pulse count',
-    'platform': 'energieleser',
-    'previous_unique_id': None,
-    'suggested_object_id': None,
-    'supported_features': 0,
-    'translation_key': 'pulse_count',
-    'unique_id': 'GAS_PULSE_8530321018_count',
-    'unit_of_measurement': None,
-  })
-# ---
-# name: test_gasleser_pulse_sensors[sensor.gas_pulse_8530321018_pulse_count-state]
-  StateSnapshot({
-    'attributes': ReadOnlyDict({
-      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'GAS_PULSE_8530321018 Pulse count',
-      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
-    }),
-    'context': <ANY>,
-    'entity_id': 'sensor.gas_pulse_8530321018_pulse_count',
-    'last_changed': <ANY>,
-    'last_reported': <ANY>,
-    'last_updated': <ANY>,
-    'state': '603',
-  })
-# ---
-# name: test_gasleser_pulse_sensors[sensor.gas_pulse_8530321018_signal_strength-entry]
-  EntityRegistryEntrySnapshot({
-    'aliases': list([
-      None,
-    ]),
-    'area_id': None,
-    'capabilities': dict({
-      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
-    }),
-    'config_entry_id': <ANY>,
-    'config_subentry_id': <ANY>,
-    'device_class': None,
-    'device_id': <ANY>,
-    'disabled_by': None,
-    'domain': 'sensor',
-    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
-    'entity_id': 'sensor.gas_pulse_8530321018_signal_strength',
-    'has_entity_name': True,
-    'hidden_by': None,
-    'icon': None,
-    'id': <ANY>,
-    'labels': set({
-    }),
-    'name': None,
-    'object_id_base': 'Signal strength',
-    'options': dict({
-    }),
-    'original_device_class': <SensorDeviceClass.SIGNAL_STRENGTH: 'signal_strength'>,
-    'original_icon': None,
-    'original_name': 'Signal strength',
-    'platform': 'energieleser',
-    'previous_unique_id': None,
-    'suggested_object_id': None,
-    'supported_features': 0,
-    'translation_key': None,
-    'unique_id': 'GAS_PULSE_8530321018_signal_strength_dbm',
-    'unit_of_measurement': 'dBm',
-  })
-# ---
-# name: test_gasleser_pulse_sensors[sensor.gas_pulse_8530321018_signal_strength-state]
-  StateSnapshot({
-    'attributes': ReadOnlyDict({
-      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'signal_strength',
-      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'GAS_PULSE_8530321018 Signal strength',
-      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
-      <EntityStateAttribute.UNIT_OF_MEASUREMENT: 'unit_of_measurement'>: 'dBm',
-    }),
-    'context': <ANY>,
-    'entity_id': 'sensor.gas_pulse_8530321018_signal_strength',
-    'last_changed': <ANY>,
-    'last_reported': <ANY>,
-    'last_updated': <ANY>,
-    'state': '-51.0',
-  })
-# ---
-# name: test_gasleser_pulse_sensors[sensor.gas_pulse_8530321018_total_gas-entry]
-  EntityRegistryEntrySnapshot({
-    'aliases': list([
-      None,
-    ]),
-    'area_id': None,
-    'capabilities': dict({
-      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
-    }),
-    'config_entry_id': <ANY>,
-    'config_subentry_id': <ANY>,
-    'device_class': None,
-    'device_id': <ANY>,
-    'disabled_by': None,
-    'domain': 'sensor',
-    'entity_category': None,
-    'entity_id': 'sensor.gas_pulse_8530321018_total_gas',
-    'has_entity_name': True,
-    'hidden_by': None,
-    'icon': None,
-    'id': <ANY>,
-    'labels': set({
-    }),
-    'name': None,
-    'object_id_base': 'Total gas',
-    'options': dict({
-      'sensor': dict({
-        'suggested_display_precision': 2,
-      }),
-    }),
-    'original_device_class': <SensorDeviceClass.GAS: 'gas'>,
-    'original_icon': None,
-    'original_name': 'Total gas',
-    'platform': 'energieleser',
-    'previous_unique_id': None,
-    'suggested_object_id': None,
-    'supported_features': 0,
-    'translation_key': 'gas_consumption',
-    'unique_id': 'GAS_PULSE_8530321018_total_consumption',
-    'unit_of_measurement': <UnitOfVolume.CUBIC_METERS: 'm³'>,
-  })
-# ---
-# name: test_gasleser_pulse_sensors[sensor.gas_pulse_8530321018_total_gas-state]
-  StateSnapshot({
-    'attributes': ReadOnlyDict({
-      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'gas',
-      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'GAS_PULSE_8530321018 Total gas',
-      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
-      <EntityStateAttribute.UNIT_OF_MEASUREMENT: 'unit_of_measurement'>: <UnitOfVolume.CUBIC_METERS: 'm³'>,
-    }),
-    'context': <ANY>,
-    'entity_id': 'sensor.gas_pulse_8530321018_total_gas',
-    'last_changed': <ANY>,
-    'last_reported': <ANY>,
-    'last_updated': <ANY>,
-    'state': '37030.67',
-  })
-# ---
-# name: test_gasleser_sensors[sensor.gas_8530321017_gas_flow_rate-entry]
+# name: test_device_sensors[gasleser][sensor.gas_8530321017_gas_flow_rate-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -265,7 +41,7 @@
     'unit_of_measurement': <UnitOfVolumeFlowRate.CUBIC_METERS_PER_HOUR: 'm³/h'>,
   })
 # ---
-# name: test_gasleser_sensors[sensor.gas_8530321017_gas_flow_rate-state]
+# name: test_device_sensors[gasleser][sensor.gas_8530321017_gas_flow_rate-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'volume_flow_rate',
@@ -281,7 +57,7 @@
     'state': '0.01',
   })
 # ---
-# name: test_gasleser_sensors[sensor.gas_8530321017_pulse_count-entry]
+# name: test_device_sensors[gasleser][sensor.gas_8530321017_pulse_count-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -320,7 +96,7 @@
     'unit_of_measurement': None,
   })
 # ---
-# name: test_gasleser_sensors[sensor.gas_8530321017_pulse_count-state]
+# name: test_device_sensors[gasleser][sensor.gas_8530321017_pulse_count-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'GAS_8530321017 Pulse count',
@@ -334,7 +110,7 @@
     'state': '603',
   })
 # ---
-# name: test_gasleser_sensors[sensor.gas_8530321017_signal_strength-entry]
+# name: test_device_sensors[gasleser][sensor.gas_8530321017_signal_strength-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -373,7 +149,7 @@
     'unit_of_measurement': 'dBm',
   })
 # ---
-# name: test_gasleser_sensors[sensor.gas_8530321017_signal_strength-state]
+# name: test_device_sensors[gasleser][sensor.gas_8530321017_signal_strength-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'signal_strength',
@@ -389,7 +165,7 @@
     'state': '-51.0',
   })
 # ---
-# name: test_gasleser_sensors[sensor.gas_8530321017_total_gas-entry]
+# name: test_device_sensors[gasleser][sensor.gas_8530321017_total_gas-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -431,7 +207,7 @@
     'unit_of_measurement': <UnitOfVolume.CUBIC_METERS: 'm³'>,
   })
 # ---
-# name: test_gasleser_sensors[sensor.gas_8530321017_total_gas-state]
+# name: test_device_sensors[gasleser][sensor.gas_8530321017_total_gas-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'gas',
@@ -447,7 +223,231 @@
     'state': '37030.67',
   })
 # ---
-# name: test_stromleser_sensors[sensor.strom_one_8529546829_active_power-entry]
+# name: test_device_sensors[gasleser_pulse][sensor.gas_pulse_8530321018_gas_flow_rate-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': None,
+    'entity_id': 'sensor.gas_pulse_8530321018_gas_flow_rate',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Gas flow rate',
+    'options': dict({
+      'sensor': dict({
+        'suggested_display_precision': 0,
+      }),
+    }),
+    'original_device_class': <SensorDeviceClass.VOLUME_FLOW_RATE: 'volume_flow_rate'>,
+    'original_icon': None,
+    'original_name': 'Gas flow rate',
+    'platform': 'energieleser',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'flow_rate',
+    'unique_id': 'GAS_PULSE_8530321018_current_flow_rate',
+    'unit_of_measurement': <UnitOfVolumeFlowRate.CUBIC_METERS_PER_HOUR: 'm³/h'>,
+  })
+# ---
+# name: test_device_sensors[gasleser_pulse][sensor.gas_pulse_8530321018_gas_flow_rate-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'volume_flow_rate',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'GAS_PULSE_8530321018 Gas flow rate',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+      <EntityStateAttribute.UNIT_OF_MEASUREMENT: 'unit_of_measurement'>: <UnitOfVolumeFlowRate.CUBIC_METERS_PER_HOUR: 'm³/h'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.gas_pulse_8530321018_gas_flow_rate',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '0.01',
+  })
+# ---
+# name: test_device_sensors[gasleser_pulse][sensor.gas_pulse_8530321018_pulse_count-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.gas_pulse_8530321018_pulse_count',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Pulse count',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'Pulse count',
+    'platform': 'energieleser',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'pulse_count',
+    'unique_id': 'GAS_PULSE_8530321018_count',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_device_sensors[gasleser_pulse][sensor.gas_pulse_8530321018_pulse_count-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'GAS_PULSE_8530321018 Pulse count',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.gas_pulse_8530321018_pulse_count',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '603',
+  })
+# ---
+# name: test_device_sensors[gasleser_pulse][sensor.gas_pulse_8530321018_signal_strength-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': <EntityCategory.DIAGNOSTIC: 'diagnostic'>,
+    'entity_id': 'sensor.gas_pulse_8530321018_signal_strength',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Signal strength',
+    'options': dict({
+    }),
+    'original_device_class': <SensorDeviceClass.SIGNAL_STRENGTH: 'signal_strength'>,
+    'original_icon': None,
+    'original_name': 'Signal strength',
+    'platform': 'energieleser',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': None,
+    'unique_id': 'GAS_PULSE_8530321018_signal_strength_dbm',
+    'unit_of_measurement': 'dBm',
+  })
+# ---
+# name: test_device_sensors[gasleser_pulse][sensor.gas_pulse_8530321018_signal_strength-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'signal_strength',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'GAS_PULSE_8530321018 Signal strength',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.MEASUREMENT: 'measurement'>,
+      <EntityStateAttribute.UNIT_OF_MEASUREMENT: 'unit_of_measurement'>: 'dBm',
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.gas_pulse_8530321018_signal_strength',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '-51.0',
+  })
+# ---
+# name: test_device_sensors[gasleser_pulse][sensor.gas_pulse_8530321018_total_gas-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'sensor',
+    'entity_category': None,
+    'entity_id': 'sensor.gas_pulse_8530321018_total_gas',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Total gas',
+    'options': dict({
+      'sensor': dict({
+        'suggested_display_precision': 2,
+      }),
+    }),
+    'original_device_class': <SensorDeviceClass.GAS: 'gas'>,
+    'original_icon': None,
+    'original_name': 'Total gas',
+    'platform': 'energieleser',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'gas_consumption',
+    'unique_id': 'GAS_PULSE_8530321018_total_consumption',
+    'unit_of_measurement': <UnitOfVolume.CUBIC_METERS: 'm³'>,
+  })
+# ---
+# name: test_device_sensors[gasleser_pulse][sensor.gas_pulse_8530321018_total_gas-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'gas',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'GAS_PULSE_8530321018 Total gas',
+      <SensorEntityCapabilityAttribute.STATE_CLASS: 'state_class'>: <SensorStateClass.TOTAL_INCREASING: 'total_increasing'>,
+      <EntityStateAttribute.UNIT_OF_MEASUREMENT: 'unit_of_measurement'>: <UnitOfVolume.CUBIC_METERS: 'm³'>,
+    }),
+    'context': <ANY>,
+    'entity_id': 'sensor.gas_pulse_8530321018_total_gas',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': '37030.67',
+  })
+# ---
+# name: test_device_sensors[stromleser][sensor.strom_one_8529546829_active_power-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -489,7 +489,7 @@
     'unit_of_measurement': 'W',
   })
 # ---
-# name: test_stromleser_sensors[sensor.strom_one_8529546829_active_power-state]
+# name: test_device_sensors[stromleser][sensor.strom_one_8529546829_active_power-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'power',
@@ -505,7 +505,7 @@
     'state': '8.16',
   })
 # ---
-# name: test_stromleser_sensors[sensor.strom_one_8529546829_exported_energy-entry]
+# name: test_device_sensors[stromleser][sensor.strom_one_8529546829_exported_energy-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -547,7 +547,7 @@
     'unit_of_measurement': 'Wh',
   })
 # ---
-# name: test_stromleser_sensors[sensor.strom_one_8529546829_exported_energy-state]
+# name: test_device_sensors[stromleser][sensor.strom_one_8529546829_exported_energy-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'energy',
@@ -563,7 +563,7 @@
     'state': '26561.0',
   })
 # ---
-# name: test_stromleser_sensors[sensor.strom_one_8529546829_imported_energy-entry]
+# name: test_device_sensors[stromleser][sensor.strom_one_8529546829_imported_energy-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -605,7 +605,7 @@
     'unit_of_measurement': 'Wh',
   })
 # ---
-# name: test_stromleser_sensors[sensor.strom_one_8529546829_imported_energy-state]
+# name: test_device_sensors[stromleser][sensor.strom_one_8529546829_imported_energy-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'energy',
@@ -621,7 +621,7 @@
     'state': '12345.0',
   })
 # ---
-# name: test_stromleser_sensors[sensor.strom_one_8529546829_phase_1_power-entry]
+# name: test_device_sensors[stromleser][sensor.strom_one_8529546829_phase_1_power-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -663,7 +663,7 @@
     'unit_of_measurement': 'W',
   })
 # ---
-# name: test_stromleser_sensors[sensor.strom_one_8529546829_phase_1_power-state]
+# name: test_device_sensors[stromleser][sensor.strom_one_8529546829_phase_1_power-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'power',
@@ -679,7 +679,7 @@
     'state': '0.0',
   })
 # ---
-# name: test_stromleser_sensors[sensor.strom_one_8529546829_phase_2_power-entry]
+# name: test_device_sensors[stromleser][sensor.strom_one_8529546829_phase_2_power-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -721,7 +721,7 @@
     'unit_of_measurement': 'W',
   })
 # ---
-# name: test_stromleser_sensors[sensor.strom_one_8529546829_phase_2_power-state]
+# name: test_device_sensors[stromleser][sensor.strom_one_8529546829_phase_2_power-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'power',
@@ -737,7 +737,7 @@
     'state': '0.0',
   })
 # ---
-# name: test_stromleser_sensors[sensor.strom_one_8529546829_phase_3_power-entry]
+# name: test_device_sensors[stromleser][sensor.strom_one_8529546829_phase_3_power-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -779,7 +779,7 @@
     'unit_of_measurement': 'W',
   })
 # ---
-# name: test_stromleser_sensors[sensor.strom_one_8529546829_phase_3_power-state]
+# name: test_device_sensors[stromleser][sensor.strom_one_8529546829_phase_3_power-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'power',
@@ -795,7 +795,7 @@
     'state': '8.16',
   })
 # ---
-# name: test_stromleser_sensors[sensor.strom_one_8529546829_signal_strength-entry]
+# name: test_device_sensors[stromleser][sensor.strom_one_8529546829_signal_strength-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -834,7 +834,7 @@
     'unit_of_measurement': 'dBm',
   })
 # ---
-# name: test_stromleser_sensors[sensor.strom_one_8529546829_signal_strength-state]
+# name: test_device_sensors[stromleser][sensor.strom_one_8529546829_signal_strength-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'signal_strength',
@@ -850,7 +850,7 @@
     'state': '-51.0',
   })
 # ---
-# name: test_waermeleser_sensors[sensor.heat_0000000001_energy_tariff_1-entry]
+# name: test_device_sensors[waermeleser][sensor.heat_0000000001_energy_tariff_1-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -892,7 +892,7 @@
     'unit_of_measurement': <UnitOfEnergy.MEGA_WATT_HOUR: 'MWh'>,
   })
 # ---
-# name: test_waermeleser_sensors[sensor.heat_0000000001_energy_tariff_1-state]
+# name: test_device_sensors[waermeleser][sensor.heat_0000000001_energy_tariff_1-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'energy',
@@ -908,7 +908,7 @@
     'state': '34.09',
   })
 # ---
-# name: test_waermeleser_sensors[sensor.heat_0000000001_energy_tariff_2-entry]
+# name: test_device_sensors[waermeleser][sensor.heat_0000000001_energy_tariff_2-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -950,7 +950,7 @@
     'unit_of_measurement': <UnitOfEnergy.MEGA_WATT_HOUR: 'MWh'>,
   })
 # ---
-# name: test_waermeleser_sensors[sensor.heat_0000000001_energy_tariff_2-state]
+# name: test_device_sensors[waermeleser][sensor.heat_0000000001_energy_tariff_2-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'energy',
@@ -966,7 +966,7 @@
     'state': '12.45',
   })
 # ---
-# name: test_waermeleser_sensors[sensor.heat_0000000001_energy_tariff_3-entry]
+# name: test_device_sensors[waermeleser][sensor.heat_0000000001_energy_tariff_3-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -1008,7 +1008,7 @@
     'unit_of_measurement': <UnitOfEnergy.MEGA_WATT_HOUR: 'MWh'>,
   })
 # ---
-# name: test_waermeleser_sensors[sensor.heat_0000000001_energy_tariff_3-state]
+# name: test_device_sensors[waermeleser][sensor.heat_0000000001_energy_tariff_3-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'energy',
@@ -1024,7 +1024,7 @@
     'state': '5.67',
   })
 # ---
-# name: test_waermeleser_sensors[sensor.heat_0000000001_flow_temperature-entry]
+# name: test_device_sensors[waermeleser][sensor.heat_0000000001_flow_temperature-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -1066,7 +1066,7 @@
     'unit_of_measurement': <UnitOfTemperature.CELSIUS: '°C'>,
   })
 # ---
-# name: test_waermeleser_sensors[sensor.heat_0000000001_flow_temperature-state]
+# name: test_device_sensors[waermeleser][sensor.heat_0000000001_flow_temperature-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'temperature',
@@ -1082,7 +1082,7 @@
     'state': '16.9',
   })
 # ---
-# name: test_waermeleser_sensors[sensor.heat_0000000001_power-entry]
+# name: test_device_sensors[waermeleser][sensor.heat_0000000001_power-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -1124,7 +1124,7 @@
     'unit_of_measurement': <UnitOfPower.KILO_WATT: 'kW'>,
   })
 # ---
-# name: test_waermeleser_sensors[sensor.heat_0000000001_power-state]
+# name: test_device_sensors[waermeleser][sensor.heat_0000000001_power-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'power',
@@ -1140,7 +1140,7 @@
     'state': '2.31',
   })
 # ---
-# name: test_waermeleser_sensors[sensor.heat_0000000001_return_temperature-entry]
+# name: test_device_sensors[waermeleser][sensor.heat_0000000001_return_temperature-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -1182,7 +1182,7 @@
     'unit_of_measurement': <UnitOfTemperature.CELSIUS: '°C'>,
   })
 # ---
-# name: test_waermeleser_sensors[sensor.heat_0000000001_return_temperature-state]
+# name: test_device_sensors[waermeleser][sensor.heat_0000000001_return_temperature-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'temperature',
@@ -1198,7 +1198,7 @@
     'state': '19.6',
   })
 # ---
-# name: test_waermeleser_sensors[sensor.heat_0000000001_signal_strength-entry]
+# name: test_device_sensors[waermeleser][sensor.heat_0000000001_signal_strength-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -1237,7 +1237,7 @@
     'unit_of_measurement': 'dBm',
   })
 # ---
-# name: test_waermeleser_sensors[sensor.heat_0000000001_signal_strength-state]
+# name: test_device_sensors[waermeleser][sensor.heat_0000000001_signal_strength-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'signal_strength',
@@ -1253,7 +1253,7 @@
     'state': '-51.0',
   })
 # ---
-# name: test_waermeleser_sensors[sensor.heat_0000000001_temperature_delta-entry]
+# name: test_device_sensors[waermeleser][sensor.heat_0000000001_temperature_delta-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -1295,7 +1295,7 @@
     'unit_of_measurement': <UnitOfTemperature.KELVIN: 'K'>,
   })
 # ---
-# name: test_waermeleser_sensors[sensor.heat_0000000001_temperature_delta-state]
+# name: test_device_sensors[waermeleser][sensor.heat_0000000001_temperature_delta-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'temperature_delta',
@@ -1311,7 +1311,7 @@
     'state': '2.68',
   })
 # ---
-# name: test_waermeleser_sensors[sensor.heat_0000000001_total_volume-entry]
+# name: test_device_sensors[waermeleser][sensor.heat_0000000001_total_volume-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -1353,7 +1353,7 @@
     'unit_of_measurement': <UnitOfVolume.CUBIC_METERS: 'm³'>,
   })
 # ---
-# name: test_waermeleser_sensors[sensor.heat_0000000001_total_volume-state]
+# name: test_device_sensors[waermeleser][sensor.heat_0000000001_total_volume-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'volume',
@@ -1369,7 +1369,7 @@
     'state': '3561.23',
   })
 # ---
-# name: test_waermeleser_sensors[sensor.heat_0000000001_volume_flow-entry]
+# name: test_device_sensors[waermeleser][sensor.heat_0000000001_volume_flow-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -1411,7 +1411,7 @@
     'unit_of_measurement': <UnitOfVolumeFlowRate.LITERS_PER_HOUR: 'L/h'>,
   })
 # ---
-# name: test_waermeleser_sensors[sensor.heat_0000000001_volume_flow-state]
+# name: test_device_sensors[waermeleser][sensor.heat_0000000001_volume_flow-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'volume_flow_rate',
@@ -1427,7 +1427,7 @@
     'state': '1.23',
   })
 # ---
-# name: test_wasserleser_sensors[sensor.wasser_0499632826_signal_strength-entry]
+# name: test_device_sensors[wasserleser][sensor.wasser_0499632826_signal_strength-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -1466,7 +1466,7 @@
     'unit_of_measurement': 'dBm',
   })
 # ---
-# name: test_wasserleser_sensors[sensor.wasser_0499632826_signal_strength-state]
+# name: test_device_sensors[wasserleser][sensor.wasser_0499632826_signal_strength-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'signal_strength',
@@ -1482,7 +1482,7 @@
     'state': '-49.0',
   })
 # ---
-# name: test_wasserleser_sensors[sensor.wasser_0499632826_total_water-entry]
+# name: test_device_sensors[wasserleser][sensor.wasser_0499632826_total_water-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -1524,7 +1524,7 @@
     'unit_of_measurement': <UnitOfVolume.CUBIC_METERS: 'm³'>,
   })
 # ---
-# name: test_wasserleser_sensors[sensor.wasser_0499632826_total_water-state]
+# name: test_device_sensors[wasserleser][sensor.wasser_0499632826_total_water-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'water',
@@ -1540,7 +1540,7 @@
     'state': '123.755',
   })
 # ---
-# name: test_wasserleser_sensors[sensor.wasser_0499632826_volume_flow_rate-entry]
+# name: test_device_sensors[wasserleser][sensor.wasser_0499632826_volume_flow_rate-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -1582,7 +1582,7 @@
     'unit_of_measurement': <UnitOfVolumeFlowRate.CUBIC_METERS_PER_HOUR: 'm³/h'>,
   })
 # ---
-# name: test_wasserleser_sensors[sensor.wasser_0499632826_volume_flow_rate-state]
+# name: test_device_sensors[wasserleser][sensor.wasser_0499632826_volume_flow_rate-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'volume_flow_rate',
@@ -1598,7 +1598,7 @@
     'state': '0.0',
   })
 # ---
-# name: test_wasserleser_sensors[sensor.wasser_0499632826_water_flow_rate-entry]
+# name: test_device_sensors[wasserleser][sensor.wasser_0499632826_water_flow_rate-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -1640,7 +1640,7 @@
     'unit_of_measurement': <UnitOfVolumeFlowRate.LITERS_PER_HOUR: 'L/h'>,
   })
 # ---
-# name: test_wasserleser_sensors[sensor.wasser_0499632826_water_flow_rate-state]
+# name: test_device_sensors[wasserleser][sensor.wasser_0499632826_water_flow_rate-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'volume_flow_rate',
@@ -1656,7 +1656,7 @@
     'state': '0.0',
   })
 # ---
-# name: test_wasserleser_sensors[sensor.wasser_0499632826_water_today-entry]
+# name: test_device_sensors[wasserleser][sensor.wasser_0499632826_water_today-entry]
   EntityRegistryEntrySnapshot({
     'aliases': list([
       None,
@@ -1698,7 +1698,7 @@
     'unit_of_measurement': <UnitOfVolume.CUBIC_METERS: 'm³'>,
   })
 # ---
-# name: test_wasserleser_sensors[sensor.wasser_0499632826_water_today-state]
+# name: test_device_sensors[wasserleser][sensor.wasser_0499632826_water_today-state]
   StateSnapshot({
     'attributes': ReadOnlyDict({
       <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'water',

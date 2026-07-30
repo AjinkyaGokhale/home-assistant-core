@@ -18,7 +18,12 @@ from homeassistant.core import HomeAssistant
 from homeassistant.data_entry_flow import FlowResultType
 from homeassistant.helpers.service_info.zeroconf import ZeroconfServiceInfo
 
-from .conftest import GASLESER_DEVICE_ID, STROMLESER_DEVICE_ID, STROMLESER_SW_VERSION
+from .conftest import (
+    GASLESER_DEVICE_ID,
+    GASLESER_PULSE_DEVICE_ID,
+    STROMLESER_DEVICE_ID,
+    STROMLESER_SW_VERSION,
+)
 
 from tests.common import MockConfigEntry
 
@@ -62,13 +67,27 @@ async def test_user_flow_stromleser(hass: HomeAssistant) -> None:
 
 
 @pytest.mark.usefixtures("mock_setup_entry")
-async def test_user_flow_gasleser(
+@pytest.mark.parametrize(
+    ("device_fixture", "expected_device_id"),
+    [
+        pytest.param("mock_gasleser_device", GASLESER_DEVICE_ID, id="gasleser"),
+        pytest.param(
+            "mock_gasleser_pulse_device",
+            GASLESER_PULSE_DEVICE_ID,
+            id="gasleser_pulse",
+        ),
+    ],
+)
+async def test_user_flow_gasleser_devices(
     hass: HomeAssistant,
     mock_energieleser_client: AsyncMock,
-    mock_gasleser_device: GasleserDevice,
+    request: pytest.FixtureRequest,
+    device_fixture: str,
+    expected_device_id: str,
 ) -> None:
-    """Test a successful manual user flow for a gasleser device."""
-    mock_energieleser_client.get_device.return_value = mock_gasleser_device
+    """Test a successful manual user flow for gasleser devices."""
+    device = request.getfixturevalue(device_fixture)
+    mock_energieleser_client.get_device.return_value = device
 
     result = await hass.config_entries.flow.async_init(
         DOMAIN, context={"source": SOURCE_USER}
@@ -80,8 +99,8 @@ async def test_user_flow_gasleser(
     )
 
     assert result["type"] is FlowResultType.CREATE_ENTRY
-    assert result["data"]["device_id"] == GASLESER_DEVICE_ID
-    assert result["result"].unique_id == GASLESER_DEVICE_ID
+    assert result["data"]["device_id"] == expected_device_id
+    assert result["result"].unique_id == expected_device_id
 
 
 @pytest.mark.usefixtures("mock_setup_entry")
@@ -216,6 +235,12 @@ async def test_zeroconf_flow_already_configured(
             "gas-4224559459.local.",
             "GAS_4224559459",
             id="gasleser",
+        ),
+        pytest.param(
+            "_gasleser._tcp.local.",
+            "gas-pulse-8530321018.local.",
+            "GAS_PULSE_8530321018",
+            id="gasleser_pulse",
         ),
         pytest.param(
             "_wasserleser._tcp.local.",

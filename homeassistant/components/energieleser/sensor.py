@@ -6,6 +6,7 @@ from typing import TYPE_CHECKING, override
 
 from energieleser import (
     GasleserDevice,
+    GasleserPulseDevice,
     StromleserOneDevice,
     WaermeleserDevice,
     WasserleserDevice,
@@ -52,8 +53,8 @@ class StromleserSensorEntityDescription(SensorEntityDescription):
 class GasleserSensorEntityDescription(SensorEntityDescription):
     """Describes a gasleser sensor."""
 
-    value_fn: Callable[[GasleserDevice], StateType]
-    present_fn: Callable[[GasleserDevice], bool] = lambda _: True
+    value_fn: Callable[[GasleserDevice | GasleserPulseDevice], StateType]
+    present_fn: Callable[[GasleserDevice | GasleserPulseDevice], bool] = lambda _: True
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -348,7 +349,7 @@ async def async_setup_entry(
             for description in STROMLESER_SENSORS
             if description.present_fn(device)
         )
-    elif isinstance(device, GasleserDevice):
+    elif isinstance(device, (GasleserDevice, GasleserPulseDevice)):
         async_add_entities(
             GasleserSensor(coordinator, description)
             for description in GASLESER_SENSORS
@@ -438,7 +439,7 @@ class GasleserSensor(_EnergieleserSensorBase):
         """Return the sensor value."""
         device = self.coordinator.data
         if TYPE_CHECKING:
-            assert isinstance(device, GasleserDevice)
+            assert isinstance(device, (GasleserDevice, GasleserPulseDevice))
         return self.entity_description.value_fn(device)
 
 
